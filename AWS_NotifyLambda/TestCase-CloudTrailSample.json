@@ -1,0 +1,135 @@
+
+//This is a sample test
+//testcase01
+
+{
+    "Records": [
+        {
+            "eventVersion": "1.05",
+            "userIdentity": {
+                "type": "Root",
+                "principalId": "111111111111111",
+                "arn": "arn:aws:iam::347817393927:root",
+                "accountId": "111111111111111",
+                "accessKeyId": "AAAAAAAAAAAAA",
+                "userName": "username",
+                "sessionContext": {
+                    "attributes": {
+                        "mfaAuthenticated": "true",
+                        "creationDate": "2019-07-26T20:14:07Z"
+                    }
+                },
+                "invokedBy": "signin.amazonaws.com"
+            },
+            "eventTime": "2019-07-26T20:19:54Z",
+            "eventSource": "iam.amazonaws.com",
+            "eventName": "CreateRole",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "201.6.134.63",
+            "userAgent": "signin.amazonaws.com",
+            "requestParameters": {
+                "roleName": "RoleCloudTrail_CloudWatchLogs",
+                "assumeRolePolicyDocument": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Principal\": {\n        \"Service\": [\n          \"cloudtrail.amazonaws.com\"\n        ]\n      },\n      \"Action\": \"sts:AssumeRole\"\n    }\n  ]\n}"
+            },
+            "responseElements": {
+                "role": {
+                    "assumeRolePolicyDocument": "%7B%0A%20%20%22Version%22%3A%20%222012-10-17%22%2C%0A%20%20%22Statement%22%3A%20%5B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%22Sid%22%3A%20%22%22%2C%0A%20%20%20%20%20%20%22Effect%22%3A%20%22Allow%22%2C%0A%20%20%20%20%20%20%22Principal%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22Service%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%22cloudtrail.amazonaws.com%22%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%22Action%22%3A%20%22sts%3AAssumeRole%22%0A%20%20%20%20%7D%0A%20%20%5D%0A%7D",
+                    "arn": "arn:aws:iam::111111111111111:role/RoleCloudTrail_CloudWatchLogs",
+                    "roleId": "AROAX7D3Q77GR5ZNNNK4C",
+                    "createDate": "Jul 26, 2019 8:19:54 PM",
+                    "roleName": "RoleCloudTrail_CloudWatchLogs",
+                    "path": "/"
+                }
+            },
+            "requestID": "26945748-3c36-4893-b8ec-5fda63b70c5a",
+            "eventID": "12a05b06-3c5c-44b2-8ca6-39d476c730ad",
+            "eventType": "AwsApiCall",
+            "recipientAccountId": "111111111111111"
+        },
+        {
+            "eventVersion": "1.05",
+            "userIdentity": {
+                "type": "Root",
+                "principalId": "111111111111111",
+                "arn": "arn:aws:iam::111111111111111:root",
+                "accountId": "111111111111111",
+                "accessKeyId": "AAAAAAAAAAAAAAAAAAAA",
+                "userName": "username",
+                "sessionContext": {
+                    "attributes": {
+                        "mfaAuthenticated": "true",
+                        "creationDate": "2019-07-26T20:14:07Z"
+                    }
+                },
+                "invokedBy": "signin.amazonaws.com"
+            },
+            "eventTime": "2019-07-26T20:19:54Z",
+            "eventSource": "iam.amazonaws.com",
+            "eventName": "PutRolePolicy",
+            "awsRegion": "us-east-1",
+            "sourceIPAddress": "201.6.134.63",
+            "userAgent": "signin.amazonaws.com",
+            "requestParameters": {
+                "roleName": "RoleCloudTrail_CloudWatchLogs",
+                "policyDocument": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"AWSCloudTrailCreateLogStream20141101\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        \"logs:CreateLogStream\"\n      ],\n      \"Resource\": [\n        \"arn:aws:logs:us-west-2:111111111111111:log-group:CloudTrail/DefaultLogGroup:log-stream:111111111111111_CloudTrail_us-west-2*\"\n      ]\n    },\n    {\n      \"Sid\": \"AWSCloudTrailPutLogEvents20141101\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        \"logs:PutLogEvents\"\n      ],\n      \"Resource\": [\n        \"arn:aws:logs:us-west-2:111111111111111:log-group:CloudTrail/DefaultLogGroup:log-stream:111111111111111_CloudTrail_us-west-2*\"\n      ]\n    }\n  ]\n}",
+                "policyName": "oneClick_CloudTrail_CloudWatchLogs_Role_1564172364646"
+            },
+            "responseElements": null,
+            "requestID": "595525ac-4807-4021-9eca-7e65faf90333",
+            "eventID": "67f0c7d1-f387-4ab2-8e63-0f97e5697a32",
+            "eventType": "AwsApiCall",
+            "recipientAccountId": "111111111111111"
+        }
+    ]
+}
+
+
+//-----
+//testcase02
+/*
+{
+    "Records": [
+
+
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "Root",
+        "principalId": "11111111111",
+        "arn": "arn:aws:iam::111111111111111:root",
+        "accountId": "9999999999999",
+        "accessKeyId": "XXXXXXXXXXXXX",
+        "userName": "myusername",
+        "sessionContext": {
+            "attributes": {
+                "mfaAuthenticated": "true",
+                "creationDate": "2019-07-26T20:14:07Z"
+            }
+        },
+        "invokedBy": "signin.amazonaws.com"
+    },
+    "eventTime": "2019-07-26T20:48:37Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "ModifyVpcAttribute",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "201.6.134.63",
+    "userAgent": "signin.amazonaws.com",
+    "requestParameters": {
+        "vpcId": "vpc-0c30b473fb65bad24",
+        "enableDnsSupport": {
+            "value": true
+        }
+    },
+    "responseElements": {
+        "requestId": "37934bdc-dac2-4ffc-828d-7d515bb2c3e7",
+        "_return": true
+    },
+    "requestID": "37934bdc-dac2-4ffc-828d-7d515bb2c3e7",
+    "eventID": "c70bc9ca-e8b5-40b4-b2e0-aaa90c160d99",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "111111111111111"
+}
+
+    ]
+}
+*/
